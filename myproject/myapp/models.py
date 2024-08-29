@@ -13,3 +13,8 @@ class Brand(models.Model):
     description = models.TextField(verbose_name="description")
     def __str__(self):
         return self.name
+
+class Article(models.Model):
+    title = models.CharField(max_length=255, verbose_name="title")
+    content = models.TextField(verbose_name="content")
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="created_at")
